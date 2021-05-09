@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FORM</title>
+
+		<!-- CSS -->
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+	  <style>
+	  	label.error{
+	  		display: block;
+	  		width: 100%;
+			text-align: center;
+			color: red;
+			font-size: 11px;
+	  	}
+	  	#name.error:focus, #email.error:focus, #message.error:focus {
+			box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.3);
+		}
+	  </style>
+	</head>
+	<body>
+		<div class="form">
+			<!-- PHP -->
+			<form action="ajax/form.php" method="post" id="form-ajax">
+				<fieldset>
+					<div class="title">Заповніть форму</div>
+
+					<div class="block">
+						<input class="form" id="name" type="text" name="name" placeholder="Name*">
+					</div>
+
+					<div class="block">
+						<input class="form" id="email" type="email" name="email" placeholder="E-mail@email.com*">
+					</div>
+
+					<div class="block message">
+						<textarea class="form" id="message" name="message" placeholder="your message"></textarea>
+					</div>
+
+					<div class="block-btn">
+						<button type="submit">Відправити</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<!-- JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
